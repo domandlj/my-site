@@ -13,9 +13,8 @@ import Window exposing (
     viewWindow,
     subscriptionsWindow)
 
+
 -- MAIN
-
-
 main : Program () Model Msg
 main =
   Browser.application
@@ -419,7 +418,7 @@ view model =
                 [ div 
                     [ style "text-align" "center" ]
                     [ img 
-                        [ src "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEURDnjn6etJXsyykMpBm2ELT9eEACe8iOPA&s"
+                        [ src "https://i.redd.it/tq00sm5zamt71.jpg"
                         , height 100
                         , style "border-radius" "10px"
                         ] 

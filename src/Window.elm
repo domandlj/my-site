@@ -10,7 +10,6 @@ import Browser.Events exposing (onMouseMove)
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (..)
-
 import Json.Decode as Decode
 import Browser.Events exposing (onClick)
 
@@ -23,7 +22,6 @@ type alias ModelWindow =
       dragging : Bool,
       visible : Bool
     }
-
 
 initWindow : Int -> Int -> ModelWindow
 initWindow x y =
@@ -72,11 +70,9 @@ viewWindow model content = if model.visible then (
                , style "z-index" "2"
                , style "border-radius" "10px"
                , style "box-shadow" "10px 10px 15px rgba(0, 0, 0, 0.5)"
-            
-               
-               
                ]
-            (( div [class "winborder", Html.Events.onClick Draggable] [
+        
+            (( div [if model.dragging then (class "winborderDragging") else (class "winborder"), Html.Events.onClick Draggable] [
                 button [Html.Events.onClick Visible, class "redbutton"] []
                 ] )::content)
       
