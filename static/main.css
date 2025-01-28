@@ -1,0 +1,167 @@
+/* static/main.css */
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: black; /* Light gray background for the whole page */
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden; /* Prevent scrolling */
+  z-index:6;
+
+}
+
+.redbutton {
+  position: absolute;
+  left: 280px;
+  top: 9px;
+  width: 20px; /* Smaller size */
+  height: 20px; /* Smaller size */
+  background-color: #8b1f19; /* macOS close button red color */
+  border-radius: 50%; /* Makes the button circular */
+  border: 1px solid #8b1f19; /* Optional: darker border for better visual effect */
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3); /* Subtle shadow for a 3D effect */
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  cursor: pointer; /* Shows a pointer cursor on hover */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+}
+
+.redbutton:hover {
+  background-color: #8d4440; /* Darker red for hover effect */
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5); /* Slightly larger shadow on hover */
+}
+
+
+
+.container{
+  position: absolute;
+  
+}
+.layout {
+  display: flex;
+  z-index:4;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: row; /* Changed to column for a vertical menu */
+  gap: 8px;
+  padding: 10px;
+  background-color: white; /* OS menu background color */
+  width: 100%;
+
+
+  height: 20px;  /* Full viewport width */
+  text-decoration: none;
+  z-index: 3; /* Ensure it is above other content */
+
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for a floating effect */
+  border-top-left-radius: 20px; /* Rounds the top-left corner */
+  border-top-right-radius: 20px; /* Rounds the top-right corner */
+  border-bottom-left-radius: 0; /* No rounding for the bottom-left corner */
+  border-bottom-right-radius: 0; /* No rounding for the bottom-right corner */
+}
+
+.sidebar > a {
+  padding: 5px;
+  text-decoration: none;
+  color: black;
+  height: 14px;
+  border-radius: 2px; /* Rounded corners for menu items */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth color transition */
+}
+
+.sidebar > a:hover {
+  text-decoration: none;
+  height: 14px;
+  border-radius: 2px;
+  background-color: gray; /* Darker gray on hover */
+}
+
+.sidebar > a:active {
+  text-decoration: none;
+  height: 15px;
+  background-color: #d0d0d0; /* Even darker gray when item is clicked */
+}
+
+.page {
+  position: relative;
+  height: 100vh; /* Full viewport height */
+  width: 100vw;  /* Full viewport width */
+  background-color: black; /* Fallback background color */
+  background-image: url('./animals.jpg');
+  background-size: cover; /* Ensures the image covers the entire area */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  z-index: 1;
+}
+
+
+
+.winborder {
+  display: flex;
+  top: 0px;
+  height: 15px;
+  width: 290px; /* Set width of the window */
+  padding: 10px; /* Add some padding inside the border */
+  background-color: #000000; /* Light gray background for the window */
+  position: absolute; /* Positioning for the title bar */
+  border-top-left-radius: 8px; /* Rounds the top-left corner */
+  border-top-right-radius: 8px; /* Rounds the top-right corner */
+  z-index:4;
+}
+
+.iconbutton {
+  display: flex;
+  align-items: center;
+  margin: 2px;
+  padding: 10px 20px;
+  border: none;
+  color: white;
+  background-color: rgba(255, 255, 255, 0);
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.iconbutton:hover {
+  background-color: rgba(0, 0, 0, 0.4); /* Adjust the rgba value to make it darker */
+  border-radius: 2px;
+}
+.cool-link {
+  display: inline-block;
+  padding: 8px 16px;
+  background: linear-gradient(to bottom, #6bb1ff, #007aff); /* Aqua gradient */
+  color: white; /* White text for contrast */
+  text-decoration: none;
+  border: 1px solid #0051a8; /* Subtle border */
+  border-radius: 12px; /* Rounded corners */
+  font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Classic Aqua font */
+  font-weight: bold; /* Bold text */
+  font-size: 14px; /* Standard font size */
+  cursor: pointer;
+  transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
+  box-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.2), /* Outer shadow */
+    inset 0 1px 1px rgba(255, 255, 255, 0.5); /* Inner shine */
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.3); /* Text shadow for depth */
+}
+
+.cool-link:hover {
+  background: linear-gradient(to bottom, #5aa2ff, #0066cc); /* Darker gradient on hover */
+  box-shadow: 
+    0 3px 6px rgba(0, 0, 0, 0.3), /* Enhanced outer shadow */
+    inset 0 1px 1px rgba(255, 255, 255, 0.6); /* Brighter inner shine */
+  transform: translateY(-1px); /* Slight lift effect */
+}
+
+.cool-link:active {
+  background: linear-gradient(to bottom, #007aff, #005bb5); /* Even darker gradient when pressed */
+  box-shadow: 
+    0 1px 2px rgba(0, 0, 0, 0.2), /* Reduced outer shadow */
+    inset 0 1px 1px rgba(255, 255, 255, 0.4); /* Dimmed inner shine */
+  transform: translateY(0); /* Reset lift effect */
+}
