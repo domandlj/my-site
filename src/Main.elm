@@ -219,7 +219,7 @@ windowButton left top textIcon iconUrl msg = div [ style "position" "absolute"
         ]
 
 window1button : Html Msg
-window1button = windowButton "10px" "50px" "donate" "https://cdn-icons-png.flaticon.com/512/5968/5968260.png" OpenWin1
+window1button = windowButton "10px" "50px" "btc" "https://cdn-icons-png.flaticon.com/512/5968/5968260.png" OpenWin1
 
 
 window2button : Html Msg
