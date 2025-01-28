@@ -112,9 +112,52 @@ body {
   position: absolute; /* Positioning for the title bar */
   border-top-left-radius: 8px; /* Rounds the top-left corner */
   border-top-right-radius: 8px; /* Rounds the top-right corner */
-  z-index:4;
+  z-index: 4;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease; /* Smooth transitions */
 }
 
+.winborderDragging {
+  display: flex;
+  top: 0px;
+  height: 15px;
+  width: 290px; /* Set width of the window */
+  padding: 10px; /* Add some padding inside the border */
+  background-color: #000000; /* Black background for the window */
+  position: absolute; /* Positioning for the title bar */
+  border-top-left-radius: 8px; /* Rounds the top-left corner */
+  border-top-right-radius: 8px; /* Rounds the top-right corner */
+  z-index: 4;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8); /* Add a glowing effect */
+  transform: scale(1.02); /* Slightly enlarge the window */
+  transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease; /* Smooth transitions */
+  overflow: hidden; /* Ensure the moving symbol stays within the bar */
+}
+
+.winborderDragging::before {
+  content: ""; /* Required for pseudo-elements */
+  display: block;
+  width: 4px; /* Size of the moving symbol */
+  height: 4px; /* Size of the moving symbol */
+  background-color: white; /* White color for the symbol */
+  border-radius: 50%; /* Make it a circle */
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 0; /* Start from the left */
+  transform: translateY(-50%); /* Center vertically */
+  animation: moveSymbol 2s linear infinite; /* Animation for the moving symbol */
+}
+
+@keyframes moveSymbol {
+  0% {
+    left: 0; /* Start from the left */
+  }
+  50% {
+    left: calc(90% - 4px); /* Move to the right (subtract symbol width) */
+  }
+  100% {
+    left: 0; /* Return to the left */
+  }
+}
 .iconbutton {
   display: flex;
   align-items: center;

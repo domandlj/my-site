@@ -5954,7 +5954,7 @@ var $author$project$Window$viewWindow = F2(
 							$elm$html$Html$div,
 							_List_fromArray(
 								[
-									$elm$html$Html$Attributes$class('winborder'),
+									model.dragging ? $elm$html$Html$Attributes$class('winborderDragging') : $elm$html$Html$Attributes$class('winborder'),
 									$elm$html$Html$Events$onClick($author$project$Window$Draggable)
 								]),
 							_List_fromArray(
@@ -6067,7 +6067,7 @@ var $author$project$Main$view = function (model) {
 									$elm$html$Html$img,
 									_List_fromArray(
 										[
-											$elm$html$Html$Attributes$src('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEURDnjn6etJXsyykMpBm2ELT9eEACe8iOPA&s'),
+											$elm$html$Html$Attributes$src('https://i.redd.it/tq00sm5zamt71.jpg'),
 											$elm$html$Html$Attributes$height(100),
 											A2($elm$html$Html$Attributes$style, 'border-radius', '10px')
 										]),
