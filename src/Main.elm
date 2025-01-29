@@ -456,7 +456,7 @@ view model =
                         , style "font" "inherit"
                         , style "cursor" "pointer"
                         , style "padding" "0"
-                        , style "text-decoration" "underline"]
+                 ]
                           [ text "whoami" ]
                     ]
                 

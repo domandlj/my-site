@@ -6461,8 +6461,7 @@ var $author$project$Main$view = function (model) {
 											A2($elm$html$Html$Attributes$style, 'color', 'inherit'),
 											A2($elm$html$Html$Attributes$style, 'font', 'inherit'),
 											A2($elm$html$Html$Attributes$style, 'cursor', 'pointer'),
-											A2($elm$html$Html$Attributes$style, 'padding', '0'),
-											A2($elm$html$Html$Attributes$style, 'text-decoration', 'underline')
+											A2($elm$html$Html$Attributes$style, 'padding', '0')
 										]),
 									_List_fromArray(
 										[
