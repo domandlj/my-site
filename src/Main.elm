@@ -149,7 +149,7 @@ update msg model =
     OpenWin1 -> openWin model model.window updateWindowModel
     OpenWin2 -> openWin model model.window2 updateWindow2
     OpenWinMe -> openWin model model.windowMe updateWindowMe
-    OpenWinBachelier -> openWin model model.windowBachelier updateWindowMe 
+    OpenWinBachelier -> openWin model model.windowBachelier updateWindowBachelier 
     OpenWinChip8 -> openWin model model.windowChip8 updateWindowChip8
     OpenWinMapaVegano -> openWin model model.windowMapaVegano updateWindowMapaVegano
     OpenWinLambda -> openWin model model.windowLambda updateWindowLambda

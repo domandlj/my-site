@@ -5850,7 +5850,7 @@ var $author$project$Main$update = F2(
 			case 'OpenWinMe':
 				return A3($author$project$Main$openWin, model, model.windowMe, $author$project$Main$updateWindowMe);
 			case 'OpenWinBachelier':
-				return A3($author$project$Main$openWin, model, model.windowBachelier, $author$project$Main$updateWindowMe);
+				return A3($author$project$Main$openWin, model, model.windowBachelier, $author$project$Main$updateWindowBachelier);
 			case 'OpenWinChip8':
 				return A3($author$project$Main$openWin, model, model.windowChip8, $author$project$Main$updateWindowChip8);
 			case 'OpenWinMapaVegano':
